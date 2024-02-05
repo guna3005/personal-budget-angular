@@ -21,8 +21,26 @@ const budget = {
             title: 'Grocery',
             budget: 110
         },
+        {
+            title: 'Medical Expenses',
+            budget: 50
+        },
+        {
+            title: 'Car Insurance',
+            budget: 30
+        },
+        {
+            title: 'Shopping',
+            budget: 100
+        },
+        {
+            title: 'Health Insurance',
+            budget: 25
+        },
     ]
 };
+
+app.use('/',express.static('public'));
 
 
 app.get('/budget', (req, res) => {
