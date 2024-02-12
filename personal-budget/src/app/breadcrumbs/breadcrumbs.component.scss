@@ -1,4 +1,25 @@
-.bj {
-    font-size: 36px;
-    background: red;
+.breadcrumbs {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  background-color: red;
+
+  .breadcrumbs-text {
+    font-weight: bold;
+    color: #333;
+    margin-right: 5px;
+  }
+
+  span {
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #007bff;
+    }
+
+    &.current-page {
+      font-weight: bold;
+    }
+  }
 }
