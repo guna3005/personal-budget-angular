@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import * as d3 from 'd3';
-import axios from 'axios';
 
 import { DataService } from '../data.service';
 
