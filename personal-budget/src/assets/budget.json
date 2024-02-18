@@ -1,0 +1,44 @@
+{
+  "myBudget": [
+    {
+      "title": "Phone Bill",
+      "budget": 40
+    },
+    {
+      "title": "Internet Bill",
+      "budget": 35
+    },
+    {
+      "title": "Gym Membership",
+      "budget": 30
+    },
+    {
+      "title": "Coffee",
+      "budget": 20
+    },
+    {
+      "title": "Books",
+      "budget": 40
+    },
+    {
+      "title": "Movies",
+      "budget": 30
+    },
+    {
+      "title": "Music",
+      "budget": 15
+    },
+    {
+      "title": "Gifts",
+      "budget": 50
+    },
+    {
+      "title": "Hobbies",
+      "budget": 40
+    },
+    {
+      "title": "Miscellaneous",
+      "budget": 75
+    }
+  ]
+}

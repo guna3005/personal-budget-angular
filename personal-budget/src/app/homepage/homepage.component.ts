@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js/auto';
 import * as d3 from 'd3';
+import axios from 'axios';
 
 import { DataService } from '../data.service';
 
@@ -23,42 +24,20 @@ export class HomepageComponent implements OnInit {
     this.getData();
   }
 
-  getData(): void {
-    this.dataSource = [
-      {
-        title: 'Eat out',
-        budget: 25,
-      },
-      {
-        title: 'Rent',
-        budget: 275,
-      },
-      {
-        title: 'Grocery',
-        budget: 110,
-      },
-      {
-        title: 'Medical Expenses',
-        budget: 50,
-      },
-      {
-        title: 'Car Insurance',
-        budget: 30,
-      },
-      {
-        title: 'Shopping',
-        budget: 100,
-      },
-      {
-        title: 'Health Insurance',
-        budget: 25,
-      },
-    ].map((obj: BudgetItem) => {
-      return { label: obj.title, value: obj.budget };
-    });
+  async getData(): Promise<void> {
+    try {
+      const response = await axios.get('../../assets/budget.json');
+      const data = response.data.myBudget || [];
 
-    console.log(this.dataSource);
-    this.createCharts();
+      this.dataSource = data.map((obj: BudgetItem) => ({
+        label: obj.title,
+        value: obj.budget,
+      }));
+
+      this.createCharts();
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   }
 
   createCharts(): void {
