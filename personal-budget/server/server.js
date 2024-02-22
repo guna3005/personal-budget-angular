@@ -8,6 +8,7 @@ const port = 3000;
 app.use(cors());
 
 const bud = require("./budget.json");
+console.log(bud)
 
 app.use("/", express.static("public"));
 

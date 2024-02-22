@@ -1,9 +1,11 @@
 {
   "name": "personal-budget",
   "version": "0.0.0",
+  "main": "server.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "server":"node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

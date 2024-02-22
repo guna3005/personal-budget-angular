@@ -26,7 +26,7 @@ export class HomepageComponent implements OnInit {
 
   async getData(): Promise<void> {
     try {
-      const response = await axios.get('../../assets/budget.json');
+      const response = await axios.get('http://localhost:3000/budget');
       const data = response.data.myBudget || [];
 
       this.dataSource = data.map((obj: BudgetItem) => ({
